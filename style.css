@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #f0f0f0; /* Light text for dark background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: #f0f0f0; /* Light background for minimalistic feel */
+    background-color: #121212; /* Dark background */
 }
 
 .background {
@@ -22,41 +22,42 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://source.unsplash.com/1920x1080/?nature,landscape') center/cover no-repeat;
+    background: url('https://source.unsplash.com/1920x1080/?night,landscape') center/cover no-repeat;
     filter: blur(8px);
     z-index: -1;
 }
 
 .container {
-    max-width: 800px; /* Adjusted size */
-    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    background-color: rgba(30, 30, 30, 0.8); /* Darker container */
     border-radius: 15px;
-    padding: 40px; /* Reduced padding for minimal look */
+    padding: 40px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative; /* For pseudo-elements */
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    color: #2c3e50; /* Darker text for better readability */
+    color: #e74c3c; /* Accent color */
 }
 
 .highlight {
-    color: #e74c3c; /* Accent color for highlights */
+    color: #ffcc00; /* Highlight color */
 }
 
 .bio {
     font-size: 1.1rem;
     margin-bottom: 25px;
-    color: #555;
+    color: #ccc; /* Lighter text for bio */
     line-height: 1.5;
 }
 
 .social-links h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #e74c3c;
 }
 
 .social-links ul {
@@ -66,27 +67,33 @@ h1 {
 }
 
 .social-links ul li {
-    margin: 15px 0;
+    margin: 20px 0; /* Increased margin for spacing */
     display: flex;
     justify-content: center;
+    transition: transform 0.3s; /* Hover effect */
+}
+
+.social-links ul li:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
 .social-links ul li a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: #2980b9; /* Professional color for links */
+    color: #dcdcdc; /* Lighter link color */
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .social-links ul li a img {
     margin-right: 10px;
-    width: 24px; /* Set a consistent size for icons */
+    width: 24px;
     height: 24px;
 }
 
 .social-links ul li a:hover {
-    color: #e74c3c; /* Change color on hover for interaction */
+    color: #ffcc00; /* Change color on hover */
 }
 
 @media (min-width: 768px) {
@@ -97,4 +104,22 @@ h1 {
     .social-links ul li {
         margin: 0 20px;
     }
+}
+
+/* Decorative patterns */
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 30%, transparent 30%);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.container::after {
+    top: 60%;
+    opacity: 0.15;
 }
