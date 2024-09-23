@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #0a3d62, #4b6584);
+    background-color: #f0f0f0; /* Light background for minimalistic feel */
 }
 
 .background {
@@ -22,84 +22,71 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://source.unsplash.com/1920x1080/?cityscape,night') center/cover no-repeat;
-    filter: blur(10px);
+    background: url('https://source.unsplash.com/1920x1080/?nature,landscape') center/cover no-repeat;
+    filter: blur(8px);
     z-index: -1;
 }
 
 .container {
-    max-width: 900px;
-    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 800px; /* Adjusted size */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    padding: 60px;
+    padding: 40px; /* Reduced padding for minimal look */
     text-align: center;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid #00b894;
-    animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #00b894;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50; /* Darker text for better readability */
 }
 
 .highlight {
-    color: #ff7675;
-    text-shadow: 0 0 10px #ff7675, 0 0 20px #ff7675;
+    color: #e74c3c; /* Accent color for highlights */
 }
 
 .bio {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #d1d1d1;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #555;
+    line-height: 1.5;
 }
 
 .social-links h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #00b894;
+    color: #2c3e50;
 }
 
 .social-links ul {
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0;
+    margin: 0;
 }
 
 .social-links ul li {
     margin: 15px 0;
     display: flex;
     justify-content: center;
-    transition: transform 0.2s;
-}
-
-.social-links ul li:hover {
-    transform: scale(1.1);
 }
 
 .social-links ul li a {
     text-decoration: none;
-    font-size: 1.4rem;
-    color: #00b894;
+    font-size: 1.2rem;
+    color: #2980b9; /* Professional color for links */
     display: flex;
     align-items: center;
 }
 
 .social-links ul li a img {
     margin-right: 10px;
+    width: 24px; /* Set a consistent size for icons */
+    height: 24px;
 }
 
 .social-links ul li a:hover {
-    color: #ff7675;
+    color: #e74c3c; /* Change color on hover for interaction */
 }
 
 @media (min-width: 768px) {
@@ -108,6 +95,6 @@ h1 {
         flex-wrap: wrap;
     }
     .social-links ul li {
-        margin: 0 15px;
+        margin: 0 20px;
     }
 }
