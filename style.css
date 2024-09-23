@@ -13,6 +13,7 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
 .background {
@@ -34,6 +35,12 @@ body {
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
     border: 2px solid #00ffcc;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 h1 {
@@ -41,6 +48,7 @@ h1 {
     margin-bottom: 20px;
     color: #00ffcc;
     text-shadow: 0 0 5px #00ffcc, 0 0 20px #00ffcc;
+    font-family: 'Pacifico', cursive;
 }
 
 .neon-text {
@@ -64,6 +72,9 @@ h1 {
 
 .social-links ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-links ul li {
@@ -75,7 +86,6 @@ h1 {
     font-size: 1.4rem;
     color: #00ffcc;
     transition: color 0.3s ease;
-    text-shadow: 0 0 5px #00ffcc, 0 0 15px #00ffcc;
     display: flex;
     align-items: center;
 }
@@ -89,31 +99,11 @@ h1 {
     text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff33cc;
 }
 
-.coming-soon {
-    font-size: 1.5rem;
-    color: #ff33cc;
-    margin: 20px 0;
-}
-
-nav {
-    margin-top: 30px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #00ffcc;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff33cc;
+@media (min-width: 768px) {
+    .social-links ul {
+        flex-direction: row;
+    }
+    .social-links ul li {
+        margin: 0 15px;
+    }
 }
