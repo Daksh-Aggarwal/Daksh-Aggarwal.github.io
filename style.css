@@ -6,40 +6,49 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f7fa;
-    color: #333;
+    background-color: #0d0d0d;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: radial-gradient(circle, #1a1a1a 0%, #0d0d0d 100%);
 }
 
 .container {
     max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #1f1f1f;
+    border-radius: 12px;
     padding: 40px;
     text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    border: 2px solid #00ffcc;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.neon-text {
+    color: #ff33cc;
+    text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff33cc, 0 0 30px #ff33cc;
 }
 
 .bio {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #555;
+    color: #d1d1d1;
     line-height: 1.6;
 }
 
 .social-links h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: #2980b9;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
 .social-links ul {
@@ -52,11 +61,13 @@ h1 {
 
 .social-links ul li a {
     text-decoration: none;
-    font-size: 1.2rem;
-    color: #3498db;
+    font-size: 1.4rem;
+    color: #00ffcc;
     transition: color 0.3s ease;
+    text-shadow: 0 0 5px #00ffcc, 0 0 15px #00ffcc;
 }
 
 .social-links ul li a:hover {
-    color: #1abc9c;
+    color: #ff33cc;
+    text-shadow: 0 0 10px #ff33cc, 0 0 20px #ff33cc;
 }
